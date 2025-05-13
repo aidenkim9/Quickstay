@@ -1,47 +1,6 @@
 import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
-
-interface IUserDummyData {
-  _id: string;
-  username: string;
-  email: string;
-  image: string;
-  role: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-  recentSearchedCities: string[];
-}
-
-interface IHotelDummyData {
-  _id: string;
-  name: string;
-  address: string;
-  contact: string;
-  owner: IUserDummyData;
-  city: string;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-}
-
-interface IRoomData {
-  _id: string;
-  hotel: IHotelDummyData;
-  roomType: string;
-  pricePerNight: number;
-  amenities: string[];
-  images: string[];
-  isAvailable: boolean;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-}
-
-interface IHotelCardProps {
-  room: IRoomData;
-  index: number;
-}
+import type { IHotelCardProps } from "../types";
 
 const HotelCard = ({ room, index }: IHotelCardProps) => {
   return (

@@ -147,8 +147,6 @@ export const facilityIcons = {
   "Pool Access": assets.poolIcon,
 } as const;
 
-export type FacilityKey = keyof typeof facilityIcons;
-
 // For Room Details Page
 export const roomCommonData = [
   {
