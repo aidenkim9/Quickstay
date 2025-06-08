@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { assets, facilityIcons, roomsDummyData } from "../assets/assets";
 import Title from "../components/Title";
 import StarRating from "../components/StarRating";
-import { useState } from "react";
+import { useState, type FC } from "react";
 import type { FacilityKey } from "../types";
 
 interface ICheckBoxProps {
@@ -51,7 +51,7 @@ const RadioBox = ({
   );
 };
 
-const AllRooms = () => {
+const AllRooms: FC = () => {
   const navigate = useNavigate();
   const [openFilters, setOpenFilters] = useState(false);
   const roomTypes = ["Single Bed", "Double Bed", "Luxury Room", "Family Suite"];

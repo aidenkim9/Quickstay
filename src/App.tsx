@@ -7,8 +7,12 @@ import RoomDetails from "./pages/RoomDetails";
 import Mybookings from "./pages/Mybookings";
 import HotelReg from "./components/HotelReg";
 import Layout from "./pages/hotelOwner/Layout";
+import type { FC } from "react";
+import Dashboard from "./pages/hotelOwner/Dashboard";
+import AddRoom from "./pages/hotelOwner/AddRoom";
+import ListRoom from "./pages/hotelOwner/ListRoom";
 
-const App = () => {
+const App: FC = () => {
   const isOwnerPath = useLocation().pathname.includes("owner");
 
   return (
@@ -21,7 +25,11 @@ const App = () => {
           <Route path="/rooms" element={<AllRooms />} />
           <Route path="/rooms/:id" element={<RoomDetails />} />
           <Route path="/my-bookings" element={<Mybookings />} />
-          <Route path="/owner" element={<Layout />} />
+          <Route path="/owner" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="add-room" element={<AddRoom />} />
+            <Route path="list-room" element={<ListRoom />} />
+          </Route>
         </Routes>
       </div>
       <Footer />

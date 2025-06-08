@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FC } from "react";
 import { useParams } from "react-router-dom";
 import {
   assets,
@@ -9,7 +9,7 @@ import {
 import type { FacilityKey, IRoomData } from "../types";
 import StarRating from "../components/StarRating";
 
-const RoomDetails = () => {
+const RoomDetails: FC = () => {
   const { id } = useParams();
   const [room, setRoom] = useState<IRoomData | null>(null);
   const [mainImg, setmMainImg] = useState<string | null>(null);

@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/hotelOwner/Navbar";
 import Sidebar from "../../components/hotelOwner/Sidebar";
+import type { FC } from "react";
 
-const Layout = () => {
+const Layout: FC = () => {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />

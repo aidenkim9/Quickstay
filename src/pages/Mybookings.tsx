@@ -1,8 +1,8 @@
 import Title from "../components/Title";
 import { assets, userBookingsDummyData } from "../assets/assets";
-import { useState } from "react";
+import { useState, type FC } from "react";
 
-const Mybookings = () => {
+const Mybookings: FC = () => {
   const [bookings, setBookings] = useState(userBookingsDummyData);
 
   return (
